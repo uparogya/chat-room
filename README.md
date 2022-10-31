@@ -1,0 +1,3 @@
+PHP Chat Room is a group chat engine that provides a platform for secure web communication. Every chat will have a unique ID and unique users. It uses AJAX and jQuery to ensure live communication with no refresh. The host controls how long the conversation lasts, while other members can only leave or join the existing session with their history retained.
+
+Setup Instructions: After cloning, go to the variables.php file and configure the database setup as per your requirement. Create a table `current_chats` with two columns: `chat_id_index` INT and `chat_id` INT. Open the index.php file and the chat engine is ready.
