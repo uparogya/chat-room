@@ -1,0 +1,19 @@
+on: 
+  push:
+    branches:
+      - main
+name: 🚀 Deploy the code on push for chat engine
+jobs:
+  web-deploy:
+    name: 🎉 Deploy to chat.arogyaupadhyaya.com.np
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      with:
+        server: 45.118.132.159
+        username: chat@arogyaupadhyaya.com.np
+        password: buswex-sockiD-3cuqce
