@@ -1,7 +1,7 @@
 <?php
 	include('variables.php');
 	session_start();
-	$connection = new mysqli($GLOBALS['server'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['database']);
+	$connection = new mysqli($GLOBALS['server'], $GLOBALS['server_username'], $GLOBALS['server_password'], $GLOBALS['server_database']);
 	$retriving_query = "SELECT `name` , `message` FROM `" . $_SESSION['chat_id'] . "`;";
 	$result = $connection -> query($retriving_query);
 	if ($result -> num_rows > 0) {

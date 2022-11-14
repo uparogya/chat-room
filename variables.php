@@ -1,6 +1,6 @@
 <?php
 $GLOBALS['server'] = 'localhost';
-$GLOBALS['username'] = 'arogya';
-$GLOBALS['password'] = 'verystrongpassword';
-$GLOBALS['database'] = 'chat';
+$GLOBALS['server_username'] = 'arogya';
+$GLOBALS['server_password'] = 'verystrongpassword';
+$GLOBALS['server_database'] = 'chat';
 ?>

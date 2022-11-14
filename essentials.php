@@ -21,7 +21,7 @@
 		}
 	}
 	function name_exist_check($obtained_name){
-		$GLOBALS['connection'] = new mysqli($GLOBALS['server'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['database']);
+		$GLOBALS['connection'] = new mysqli($GLOBALS['server'], $GLOBALS['server_username'], $GLOBALS['server_password'], $GLOBALS['server_database']);
 		$name_searching_query = "SELECT `id` FROM " . $_SESSION['chat_id'] . "_PARTICIPANTS WHERE name='".$obtained_name."';";
 		$random_num = rand(0,100);
 		$obtaines_rows = $GLOBALS['connection'] -> query($name_searching_query);

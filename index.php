@@ -3,7 +3,7 @@
 	if (isset($_COOKIE['chat_id'])) {
         header('location:chat_page.php');
     }
-	$GLOBALS['connection'] = new mysqli($GLOBALS['server'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['database']);
+	$GLOBALS['connection'] = new mysqli($GLOBALS['server'], $GLOBALS['server_username'], $GLOBALS['server_password'], $GLOBALS['server_database']);
 	$GLOBALS['user_is_able_to_start_a_session'] = false;
 	$username=$name_error=$user_input_id=$user_input_id_error="";
 	include 'essentials.php';

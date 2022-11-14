@@ -1,7 +1,7 @@
 <?php
 	include('variables.php');
 	session_start();
-	$connection = new mysqli($GLOBALS['server'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['database']);
+	$connection = new mysqli($GLOBALS['server'], $GLOBALS['server_username'], $GLOBALS['server_password'], $GLOBALS['server_database']);
 	$chat_id_search_query = "SELECT chat_id FROM current_chats WHERE chat_id_index = '" . $_COOKIE['chat_id'] . "';";
 	$chat_id_exists = $connection -> query($chat_id_search_query);
 	if ($chat_id_exists -> num_rows == 0) {
