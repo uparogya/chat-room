@@ -17,14 +17,14 @@
 	}
 
 	function chat_table_creation($table_name){
-		$chat_table_creating_query_slice_1 = "CREATE TABLE `chat`.`";
+		$chat_table_creating_query_slice_1 = "CREATE TABLE `";
 		$chat_table_creating_query_slice_2 = "` ( `id` INT NOT NULL AUTO_INCREMENT , `name` TEXT NOT NULL , `message` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 		$chat_table_creating_query = $chat_table_creating_query_slice_1 . $table_name . $chat_table_creating_query_slice_2;
 		$GLOBALS['connection'] -> query($chat_table_creating_query);
 	}
 
 	function participants_table_creation($table_name){
-		$participants_table_creating_query_slice_1 = "CREATE TABLE `chat`.`";
+		$participants_table_creating_query_slice_1 = "CREATE TABLE `";
 		$participants_table_creating_query_slice_2 = "` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(20) NOT NULL, PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 		$participants_table_creating_query = $participants_table_creating_query_slice_1 . $table_name . "_PARTICIPANTS" . $participants_table_creating_query_slice_2;
 		$GLOBALS['connection'] -> query($participants_table_creating_query);
